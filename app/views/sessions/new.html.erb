@@ -1,0 +1,45 @@
+<%= stylesheet_link_tag 'login', media: 'all' %>
+<%= stylesheet_link_tag 'teste', media: 'all' %>
+<%= stylesheet_link_tag 'main', media: 'all' %>
+
+<% if !current_user %>
+  <div class="main">
+    <header class="cover-container d-flex w-100 p-3 mx-auto flex-column masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Login</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a href=<%= root_path %> class="nav-link ">Home</a>
+        </nav>
+      </div>
+    </header>
+
+  <div class="container mx-auto">
+      <div class="py-1 wrapper">
+        <div class="form-wrapper">
+          <%= form_tag sessions_path do |form| %>
+            <fieldset class="section is-active">
+                <%= label_tag :email %>
+                <%= text_field_tag :email %>
+
+                <%= label_tag :password %>
+                <%= password_field_tag :password %>
+                <% if alert %>
+                  <div class="alert alert-danger">
+                    <strong><%= alert %></strong>
+                  </div>
+                <% end %>
+              <div class="actions">
+                <%= submit_tag "Login", class: "submit button" %>
+              </div>
+            </fieldset>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <%= link_to "Log Out", logout_path %>
+<% end %>
+<p id="notice"><%= notice %></p>
+
+

@@ -1,0 +1,40 @@
+  <%= stylesheet_link_tag "cast", :media => "all" %>
+  <%=javascript_include_tag "application"%>
+  <header>
+    <div class=header_info>
+      <div class="heading">
+        <ul id="horizontal-list">
+          <li><h1 class="name-menu">RuCast</h1></li>
+          <li><%= link_to "Log Out", logout_path, class:"nav-link"%></a></li>
+          <li>
+            <%if flash[:notice]%>
+              <div class="alert alert-success" role="alert"><%=flash[:notice]%></div>
+            <% end %>
+          </li>
+        </ul>  
+      </div>
+      <div class="formadd">
+      <%= form_tag("/cast", method: "post") do %>
+        <%= text_field_tag(:url,'', class:"input-add") %>
+        <%= submit_tag("Adicionar", class:"input-button") %>
+      <% end %>
+      
+        </div>
+      </div>
+  </header>
+  <main>
+    <section class="cards">
+      <% @feeds.each do | feed |%>
+      <article class="hover14">
+          <a href=<%= cast_path(feed.id) %>>
+              <figure>
+                <img class="article-img" src=<%= feed.path_cover %> alt=" " />
+              </figure>
+              <%= link_to image_tag("remove.png", class: "remove-img"), cast_path(feed), :method => :delete, class:"remove-button"%> 
+          </a>
+      </article>
+      <% end %>
+    </section>
+  </main>
+
+

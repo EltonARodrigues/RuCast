@@ -1,0 +1,64 @@
+  <%= stylesheet_link_tag "cast", :media => "all" %>
+<%= stylesheet_link_tag "list_ep", :media => "all" %>
+
+
+    <header>
+        <div class=header_info>
+        <div class="heading">
+             <ul id="horizontal-list">
+          <li><h1 class="name-menu">RuCast</h1></li>
+          <li><%= link_to "Back", cast_index_path, class:"nav-link"%></a></li>
+        </ul>  
+        </div>
+        <div class="formadd">
+            <input class="input-add" type="text" id="myInput" onkeyup="search_ep()" placeholder="Search">
+            </div>
+        </div>
+    </header>
+<main>
+
+
+<ul id="myUL" class="list img-list">
+    <% @list.each do | epsode |%>
+<li>
+    <div class="inner">
+    <div class="li-img">
+        <img src="<%= @cover %>" alt="Hot air balloons" />
+    </div>
+    <div class="li-text">
+        <h3 class="li-head"><%= epsode['title'] %></h3>
+        <div class="li-sub">
+        <a class="buttonDownload" href=<%=  epsode["url"] %>>download</a>
+        </div>
+        </div>
+    </div>
+    </a>
+</li>
+<% end %>
+
+</ul>
+</main>
+<script>
+
+    const  search_ep = () => {
+
+        const input = document.getElementById("myInput");
+        const filter = input.value.toUpperCase();
+        const ul = document.getElementById("myUL");
+        const li = ul.getElementsByTagName("li");
+
+        for (let i = 0; i < li.length; i++) {
+
+            h2 = li[i].getElementsByTagName("h3")[0];
+
+            const txtValue = h2.textContent || h2.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }}
+
+</script>
+

@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag 'login', media: 'all' %>
+<%= stylesheet_link_tag 'teste', media: 'all' %>
+<%= stylesheet_link_tag 'main', media: 'all' %>
+
+
+
+<div class="main">
+  <header class="cover-container d-flex w-100 p-3 mx-auto flex-column masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">New User</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a href=<%= root_path %> class="nav-link ">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <%= render 'form', user: @user %>

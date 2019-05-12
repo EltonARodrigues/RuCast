@@ -1,0 +1,42 @@
+
+<div class="container mx-auto">
+    <div class="py-1 wrapper">
+      <p id="alert"><%= alert %></p>
+
+      <div class="form-wrapper">
+         <%= form_with(model: user, local: true) do |form| %>
+            <fieldset class="section is-active">
+            <% if user.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+              <ul>
+              <% user.errors.full_messages.each do |message| %>
+                <div class="alert alert-danger">
+                  <strong><%= message %></strong>
+                </div>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+            <%= form.label :username %>
+            <%= form.text_field :username %>
+
+            <%= form.label :email %>
+            <%= form.text_field :email %>
+
+            <%= form.label :password %>
+            <%= form.password_field :password %>
+
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation %>
+
+          <div class="actions">
+            <%= form.submit 'Create', class: "submit button" %>
+          </div>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+  </div>

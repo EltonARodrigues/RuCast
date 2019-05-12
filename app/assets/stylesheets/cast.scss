@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+
+body {
+  font-family: 'Dosis', sans-serif;
+  max-block-size: 256px;
+  writing-mode: horizontal-tb;
+  width: 100%;
+  height: 100%;
+}
+
+.header_info {
+  height: 50px;
+  
+  
+}
+
+.alert {
+  height: 50px;
+  padding: 0 10px;
+}
+
+figure {
+  margin: -1.1px 0;
+}
+
+.heading {
+  
+  float: left;
+  padding-left: 0.8em;
+  padding-top: 0.2em;
+  display: table;
+  margin: 0 auto;
+}
+
+.formadd {
+  float: right;
+}
+
+
+main {
+  
+  padding-top: 60px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+}
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffffb;
+  height: 100%;
+  width: 100%;
+}
+
+
+header {
+  
+  font-size: 2em;
+  
+  background-color: #3e474f;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+}
+.nav-link:hover{
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.name-menu{
+  color: #fff;
+}
+.nav-link{
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.alert-success{
+  background: #fff;
+  border-radius: 5px;
+  
+}
+.input-button{
+  font-size: 25px;
+  padding: 5px;
+  margin: 4px;
+  border-radius: 5px;
+}
+
+#horizontal-list {
+  min-width: 496px;
+  list-style: none;
+}
+
+#horizontal-list li {
+  display: inline-grid;
+  margin: 0 20px;
+}
+
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.leading {
+  height: 240px;
+  margin-bottom: 30px;
+  padding: 30px;
+  color: white;
+  background: url("https://cdn.glitch.com/a5121e34-96b3-4a70-8227-040c51e64fae%2Fcat.jpg?1509635989509") center #333 no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.leading-bigtext {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 24vw;
+}
+
+@media (min-width: 700px) {
+  
+  
+  
+  
+  
+  .leading-bigtext {
+    font-size: 140px;
+  }
+}
+
+
+
+
+
+.leading-text {
+  max-width: 900px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+
+
+
+
+
+.cards {
+  
+  margin: 0 auto 30px;
+  padding: 0;
+}
+
+
+
+
+
+
+article {
+  position: relative;
+  
+  
+}
+
+
+
+
+
+
+.article-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.article-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 0 10px 10px;
+  
+  color: #000;
+}
+
+
+
+
+
+
+.div-title {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  float: left;
+  
+}
+
+
+
+
+
+
+fieldset {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-family: sans-serif;
+  border-width: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+label, input, button {
+  font-size: inherit;
+  padding: 0.1em 0.2em;
+  margin: 0.1em 0.2em;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid #5b5f97;
+  background-color: #fff;
+}
+
+
+
+
+
+
+input:focus {
+  outline: none;
+  background-color: #efefef;
+}
+
+.input-add {
+  width: 500px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+button {
+  margin-left: 0;
+  background-color: #ffc145;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+button:active,
+button:focus {
+  background-color: #acf;
+  outline: none;
+}
+
+
+
+
+
+
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+
+
+.remove-img {
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  background: #ff6b6c;
+}
+
+
+
+
+
+
+article figure:hover img {
+  filter: contrast(4);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+article figure img {
+  
+  filter: blur(0);
+}
+
+
+
+
+
+
+.error-alert {
+  position: fixed;
+  background-color: #ff6b6c;
+  padding: 20px;
+  width: 150px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 5s, opacity 5s linear;
+}
+
+
+
+
+
+
+.info-alert {
+  position: relative;
+  left: 45%;
+  width: 50px;
+  font-size: 50px;
+}
+
+@media (max-width: 600px) {
+  
+  
+  
+  
+  
+  main {
+    padding-top: 130px;
+  }
+
+  
+  
+  
+  
+  
+  header {
+    height: 110px;
+    align-content: center;
+    text-align: center;
+  }
+
+  
+  
+  
+  
+  
+  .heading {
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  
+  
+  
+  
+  
+  .formadd, fieldset {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  
+  
+  
+  
+  
+  #urlfeed {
+    width: 50%;
+  }
+
+  
+  
+  
+  
+  
+  button {
+    width: 80px;
+  }
+
+  
+  
+  
+  
+  
+  .leading {
+    display: flex;
+    align-items: center;
+  }
+}
