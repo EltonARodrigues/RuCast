@@ -1,25 +1,12 @@
-# README
+# Agrepador de poscast com Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Só estou estudando ruby on rails mesmo.
 
-Things you may want to cover:
+# Images
 
-* Ruby version
+![home](images/cover.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# RuCast
+![home](images/login.png)
+![home](images/newu.png)
+![home](images/index.png)]
+![home](images/eps.png)
