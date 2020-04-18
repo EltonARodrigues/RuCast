@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
     def new
         if session[:user_id]
-            redirect_to cast_index_path
+            redirect_to root_path
         end
     end
 
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         user = User.find_by_email(params[:email])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect_to cast_index_path, notice: "Logged in!"
+            redirect_to root_path, notice: "Logged in!"
         else 
             flash.now[:alert] = "Email or password is invalid"
             render :new
